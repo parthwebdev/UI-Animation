@@ -1,0 +1,52 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  background-color: #090909;
+  display: grid;
+  place-items: center;
+}
+
+button {
+  font-family: Poppins, "Bruno Ace";
+  border: 0;
+  font-size: 20px;
+}
+
+button {
+  background-color: transparent;
+  color: #8800b5;
+  padding: 13px 36px;
+  border: 2px solid #8800b5;
+  border-radius: 8px;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  transition: color 0.5s;
+}
+
+button:hover {
+  color: white;
+}
+
+button:before {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 100%;
+  width: 120%;
+  height: 220%;
+  background-color: #8800b5;
+  border-radius: 50%;
+  z-index: -1;
+  transition: all 0.6s ease;
+}
+
+button:hover:before {
+  top: -50%;
+  left: -10%;
+}
