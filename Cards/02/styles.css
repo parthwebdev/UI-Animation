@@ -15,7 +15,6 @@ body {
 .card {
   width: 300px;
   aspect-ratio: 1/1.3;
-  background-color: cyan;
   position: relative;
 }
 
