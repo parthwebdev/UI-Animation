@@ -76,7 +76,7 @@ body {
   transition-delay: 0.5s;
 }
 
-.card:hover .text-box :is(span, span) {
+.card:hover .text-box :is(span) {
   transform: translateY(0%);
 }
 
