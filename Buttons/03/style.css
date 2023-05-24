@@ -22,8 +22,6 @@ body {
   width: 0;
   height: 0;
   position: absolute;
-  /* inset: 0; */
-  /* z-index: 2; */
 }
 
 .switch {
