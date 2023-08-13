@@ -10,7 +10,7 @@
 
 body {
   font-family: Epilogue, sans-serif;
-  background-color: #111;
+  background-color: #090909;
   color: white;
   height: 100vh;
   display: grid;
@@ -39,7 +39,7 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: blue;
+  background-color: #1d59ac;
   transform: scaleX(0);
   transform-origin: left;
   animation: slideIn var(--duration) var(--delay) forwards,
