@@ -1,0 +1,38 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  background-color: hsl(251, 41%, 4%);
+  color: hsl(251, 41%, 90%);
+  font-family: system-ui;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+h1 {
+  font-size: 72px;
+}
+
+#typewriter {
+  color: hsl(251, 41%, 55%);
+}
+
+#cursor {
+  color: hsl(277, 49%, 53%);
+  font-weight: bold;
+  animation: blink 1s linear infinite;
+}
+
+@keyframes blink {
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
