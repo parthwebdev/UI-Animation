@@ -1,0 +1,95 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Poppins, sans-serif;
+  height: 100vh;
+  color: #dedede;
+  background-color: hsl(210, 10%, 8%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  width: 280px;
+  aspect-ratio: 1 / 1.3;
+  padding: 24px;
+  background-color: hsl(210, 20%, 15%);
+  border-radius: 24px;
+  box-shadow: 0px 0px 20px -1.5px hsl(0 0% 0% / 0.5);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.card > .card-image {
+  width: 100%;
+  height: 70%;
+  transition: 0.5s ease;
+}
+
+.card-content {
+  margin-top: auto;
+}
+
+.card-image > img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  border-radius: 16px;
+}
+.card:hover > .card-image {
+  translate: 0 -14px;
+}
+
+.card-content .sub-title {
+  color: #ccc;
+  font-size: 16px;
+  margin-bottom: 4px;
+}
+
+.card-content .main-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.main-content > .icon {
+  width: 32px;
+  height: 32px;
+  rotate: -45deg;
+  transition: 0.35s ease;
+}
+.card:hover .icon {
+  rotate: 0deg;
+  color: #7988d2;
+}
+
+.main-content > .title {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  inset: 1px;
+  background-color: hsl(210, 14%, 80%);
+  z-index: -1;
+  border-radius: inherit;
+  transition: all 0.35s ease;
+}
+.card:hover::before {
+  transform: rotate(10deg);
+  box-shadow: 0px 0px 20px -5px #000;
+}
