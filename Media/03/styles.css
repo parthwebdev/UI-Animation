@@ -59,7 +59,7 @@ body {
   background-position: 50% 100%;
   opacity: 0;
   cursor: pointer;
-  transition: all 2s ease-in-out;
+  transition: all 1.6s ease-in-out;
 }
 
 .bg-reveal > div:hover {
