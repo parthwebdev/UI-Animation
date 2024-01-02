@@ -1,0 +1,68 @@
+@import url("https://fonts.googleapis.com/css2?family=Mukta:wght@400;500;600&display=swap");
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Mukta;
+  height: 100vh;
+  background-color: #0a051b;
+  color: #ded8f4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn {
+  all: unset;
+  padding: 0.5rem 2rem;
+  text-transform: uppercase;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.btn > .circle {
+  --size: 2.5rem;
+  position: absolute;
+  left: 0;
+  display: block;
+  width: var(--size);
+  height: var(--size);
+  background-color: #ded8f4;
+  border-radius: 1.5rem;
+  z-index: -1;
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+}
+.btn > .text {
+  margin-left: 1.25rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  transition: all 0.45s;
+}
+.circle > i {
+  font-size: 1rem;
+  position: absolute;
+  left: calc(var(--size) / 2);
+  top: calc(var(--size) / 2);
+  transform: translate(-50%, -50%);
+  color: black;
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+}
+
+.btn:hover > .circle {
+  width: 100%;
+}
+.btn:hover > .circle > i {
+  translate: 1rem 0;
+}
+.btn:hover > .text {
+  color: black;
+}
