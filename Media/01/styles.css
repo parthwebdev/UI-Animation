@@ -11,39 +11,36 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #222;
+  background-color: #051215;
 }
 
-#grid {
-  width: 90%;
-  height: 100%;
+.grid {
+  max-width: 1000px;
+  width: 100%;
+  height: 85%;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 8px;
-  transition: grid-template-columns 0.5s ease-in-out;
+  transition: grid-template-columns 0.5s ease;
 }
 
-#grid:has(.left:hover) {
+.grid:has(.left:hover) {
   grid-template-columns: 2fr 0.5fr 0.5fr;
 }
-#grid:has(.center:hover) {
+.grid:has(.center:hover) {
   grid-template-columns: 0.5fr 2fr 0.5fr;
 }
-#grid:has(.right:hover) {
+.grid:has(.right:hover) {
   grid-template-columns: 0.5fr 0.5fr 2fr;
 }
 
-.col {
-  background-size: cover;
+img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
 }
 
-.left {
-  background-image: url(./images/1.jpg);
-}
-.center {
-  background-image: url(./images/2.jpg);
-  background-position: center;
-}
-.right {
-  background-image: url(./images/3.jpg);
+.grid > div {
+  cursor: pointer;
 }
