@@ -1,0 +1,71 @@
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "SF Pro Text";
+  font-size: 20px;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: hsl(249, 20%, 11%);
+}
+
+nav {
+  width: 100%;
+  max-width: 700px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 24px 40px;
+}
+
+nav ul {
+  display: flex;
+  gap: 1.75rem;
+  list-style: none;
+}
+
+.link {
+  text-decoration: none;
+  color: #fff;
+  font-size: 18px;
+  padding: 0.5rem 0.75rem;
+  position: relative;
+}
+
+/* Link Hover Effect */
+.link::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background: #fff;
+  z-index: -1;
+}
+
+.link:hover::before {
+  animation: fill 1s forwards;
+}
+
+@keyframes fill {
+  0% {
+    width: 0%;
+  }
+  50% {
+    width: 100%;
+    height: 2px;
+  }
+  100% {
+    width: 100%;
+    height: 100%;
+    background: hsl(249, 54%, 50%);
+  }
+}
