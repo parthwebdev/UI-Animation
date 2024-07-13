@@ -6,9 +6,10 @@
 
 body {
   height: 100vh;
-  background-color: #212120;
-  display: grid;
-  place-items: center;
+  background-color: #131315;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   font-family: Poppins;
 }
 
@@ -47,36 +48,36 @@ body {
   color: white;
 }
 
-.text-box :is(.main, .sub) {
+.text-box :is(.name, .username) {
   height: 34px;
   line-height: 34px;
   overflow: hidden;
 }
-.text-box .main {
+.text-box .name {
   font-size: 26px;
   font-weight: 600;
   text-transform: uppercase;
   position: relative;
 }
-.text-box .sub {
+.text-box .username {
   font-size: 14px;
   font-weight: 300;
 }
-.main span,
-.sub span {
+.name span,
+.username span {
   display: block;
   transition: transform 0.5s ease;
 }
-.main span {
+.name span {
   transition-delay: 0.2s;
   transform: translateY(100%);
 }
-.sub span {
+.username span {
   transform: translateY(-100%);
   transition-delay: 0.5s;
 }
 
-.card:hover .text-box :is(span) {
+.card:hover .text-box span {
   transform: translateY(0%);
 }
 
